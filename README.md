@@ -8,7 +8,7 @@ Three versions of the gene set library are provided with different levels of pse
 
 ## Gene set files
 
-Ready-to-use GMT files are available in [`GMT_files/`](GMT_files/).
+Ready-to-use GMT files are available in [`GMT_files/`](./GMT_files/).
 
 | File                                       | Description                                                                      |
 | ------------------------------------------ | -------------------------------------------------------------------------------- |
