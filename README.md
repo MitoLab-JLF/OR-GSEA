@@ -56,17 +56,22 @@ To run an analysis:
 The provided `.rnk` files are examples based on human olfactory epithelium transcriptomics data from Olender et al. (2016).
 
 ---
-
 ## Example ssGSEA analysis
 
 An example single-sample GSEA (ssGSEA) analysis is provided in [`ssGSEA_example/`](./ssGSEA_example).
 
 The directory contains:
 
-* `OR_ssGSEA_example.ipynb` — Python notebook for the example ssGSEA analysis.
-* `df_for_ssgsea.xlsx` — preprocessed transcriptomics dataset used for the example analysis.
+* `OR_ssGSEA_example.ipynb` — Google Colab notebook containing the step-by-step workflow with detailed code annotations.
+* `df_for_ssgsea.xlsx` — example transcriptomics dataset from Olender et al. (2016) used to demonstrate the workflow.
 
-The example uses transcriptomics data from human olfactory epithelium and reference specimens obtained from Olender et al. (2016).
+How to run ssGSEA:
+
+1. **Open the notebook**: Launch `OR_ssGSEA_example.ipynb` in Google Colab, where each step of the analysis is explained via inline code comments.
+2. **Input data formatting**: You can run the notebook directly with the provided `df_for_ssgsea.xlsx` or substitute it with your own dataset. Custom expression matrices must follow the same structure:
+   * **Rows**: Unique gene identifiers (HGNC Gene Symbols).
+   * **Columns**: Sample names (containing normalized expression values such as TPM, RPKM, or CPM).
+3. **Execute the analysis**: The pipeline uses `gseapy.ssgsea()` to compute sample-specific normalized enrichment scores ($NES$) across the OR family gene sets.
 
 ---
 
@@ -79,6 +84,10 @@ The directory contains the source OR annotation obtained from HORDE and three no
 * `HUMAN_OR_families_withPseudo_gmt.ipynb`
 * `HUMAN_OR_families_noPseudo_gmt.ipynb`
 * `HUMAN_OR_families_FunctionalOnly_gmt.ipynb`
+
+Custom GMT Generation:
+
+In addition to using the pre-built GMT files, users can adapt these Google Colab notebooks to build custom OR gene sets. By modifying the filtering logic, you can apply your own thresholds for HORDE pseudogene probability scores or implement custom criteria for pseudogene exclusion to fit your specific research context.
 
 The HORDE dataset used for the current release was accessed in **August 2026**.
 
