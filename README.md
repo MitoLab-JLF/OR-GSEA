@@ -8,7 +8,7 @@ Three versions of the gene set library are provided with different levels of pse
 
 ## Gene set files
 
-Ready-to-use GMT files are available in [GMT_files/](./GMT_files/).
+Ready-to-use GMT files are available in [GMT_files/](./GMT_files).
 
 | File | Description |
 | --- | --- |
@@ -40,7 +40,7 @@ The GMT files are compatible with standard GSEA software (https://www.gsea-msigd
 
 ### Pre-ranked GSEA
 
-Ready-to-use ranked files are available in [`RNK_files/`](./RNK_files/):
+Ready-to-use ranked files are available in [`RNK_files/`](./RNK_files):
 
 * `data_rank.rnk` — pre-ranked mean log2 fold-change values for all detected genes.
 * `data_rank_ORonly.rnk` — pre-ranked mean log2 fold-change values restricted to OR genes, including pseudogenes.
@@ -59,7 +59,7 @@ The provided `.rnk` files are examples based on human olfactory epithelium trans
 
 ## Example ssGSEA analysis
 
-An example single-sample GSEA (ssGSEA) analysis is provided in [`ssGSEA_example/`](./ssGSEA_example/).
+An example single-sample GSEA (ssGSEA) analysis is provided in [`ssGSEA_example/`](./ssGSEA_example).
 
 The directory contains:
 
@@ -72,7 +72,7 @@ The example uses transcriptomics data from human olfactory epithelium and refere
 
 ## Gene set construction
 
-The complete construction workflow is available in [`GMT_pipeline/`](./GMT_pipeline/).
+The complete construction workflow is available in [`GMT_pipeline/`](./GMT_pipeline).
 
 The directory contains the source OR annotation obtained from HORDE and three notebooks corresponding to the three GMT files:
 
