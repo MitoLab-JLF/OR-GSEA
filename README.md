@@ -33,7 +33,35 @@ Excludes pseudogenes identified by `P` as the final character of the gene symbol
 Additionally excludes OR genes with a HORDE-reported pseudogene probability score greater than 0.3.
 
 ---
+## Python environment
 
+All notebooks were developed and tested in **Google Colab**, which comes with 
+Python 3 and most dependencies pre-installed. To run the notebooks:
+
+1. Open the `.ipynb` file directly in Google Colab (upload it or open via 
+   `File > Open notebook > GitHub` and paste the repository URL).
+2. Install any missing packages by running the cells in the notebooks
+3. No local Python installation is required.
+---
+## Gene set construction
+
+The complete construction workflow is available in [`GMT_pipeline/`](./GMT_pipeline).
+
+The directory contains the source OR annotation obtained from HORDE and three notebooks corresponding to the three GMT files:
+
+* `HUMAN_OR_families_withPseudo_gmt.ipynb`
+* `HUMAN_OR_families_noPseudo_gmt.ipynb`
+* `HUMAN_OR_families_FunctionalOnly_gmt.ipynb`
+
+Custom GMT Generation:
+
+In addition to using the pre-built GMT files, users can adapt these Google Colab notebooks to build custom OR gene sets. By modifying the filtering logic, you can apply your own thresholds for HORDE pseudogene probability scores or implement custom criteria for pseudogene exclusion to fit your specific research context.
+
+The HORDE dataset used for the current release was accessed in **August 2026**.
+
+The workflow was performed in Python 3 using Google Colab.
+
+---
 ## How to use OR-GSEA
 
 The GMT files are compatible with standard GSEA software (https://www.gsea-msigdb.org/gsea/index.jsp) and can be used as a custom gene set database.
@@ -72,27 +100,6 @@ How to run ssGSEA:
    * **Rows**: Unique gene identifiers (HGNC Gene Symbols).
    * **Columns**: Sample names (containing normalized expression values such as TPM, RPKM, or CPM).
 3. **Execute the analysis**: The pipeline uses `gseapy.ssgsea()` to compute sample-specific normalized enrichment scores ($NES$) across the OR family gene sets.
-
----
-
-## Gene set construction
-
-The complete construction workflow is available in [`GMT_pipeline/`](./GMT_pipeline).
-
-The directory contains the source OR annotation obtained from HORDE and three notebooks corresponding to the three GMT files:
-
-* `HUMAN_OR_families_withPseudo_gmt.ipynb`
-* `HUMAN_OR_families_noPseudo_gmt.ipynb`
-* `HUMAN_OR_families_FunctionalOnly_gmt.ipynb`
-
-Custom GMT Generation:
-
-In addition to using the pre-built GMT files, users can adapt these Google Colab notebooks to build custom OR gene sets. By modifying the filtering logic, you can apply your own thresholds for HORDE pseudogene probability scores or implement custom criteria for pseudogene exclusion to fit your specific research context.
-
-The HORDE dataset used for the current release was accessed in **August 2026**.
-
-The workflow was performed in Python 3 using Google Colab.
-
 ---
 
 ## Data sources
@@ -107,8 +114,7 @@ Transcriptomics data used for the example GSEA and ssGSEA analyses.
 
 DOI: https://doi.org/10.1186/s12864-016-2960-3
 
----
-
+---   
 ## Repository structure
 
 ```text
