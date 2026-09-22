@@ -120,7 +120,7 @@ OR-GSEA/
 │   └── HUMAN_OR_families_FunctionalOnly_v01.gmt
 │
 ├── GMT_pipeline/
-│   ├── genes_fromHORDE
+│   ├── genes_fromHORDE.csv
 │   ├── HUMAN_OR_families_withPseudo_gmt.ipynb
 │   ├── HUMAN_OR_families_noPseudo_gmt.ipynb
 │   └── HUMAN_OR_families_FunctionalOnly_gmt.ipynb
