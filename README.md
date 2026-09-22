@@ -22,7 +22,7 @@ The three files represent alternative filtering levels. They do not need to be u
 
 **withPseudo**
 
-Includes all OR genes classified by HORDE without additional filtering.
+Includes all OR genes classified by HORDE without filtering.
 
 **noPseudo**
 
