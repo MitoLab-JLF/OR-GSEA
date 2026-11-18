@@ -114,7 +114,14 @@ Transcriptomics data used for the example GSEA and ssGSEA analyses.
 
 DOI: https://doi.org/10.1186/s12864-016-2960-3
 
----   
+---  
+
+## Limitations
+The current gene sets are based on the HORDE database version accessed in August 2026. As OR annotations and classifications may change over time, the gene sets may not reflect newly discovered receptors or updated gene classifications. Periodic updates and manual curation may therefore be required.
+
+Another limitation is the small size of some OR families. For example, Family 3 contains only six genes, decreasing to three after pseudogene exclusion. Several other families also contain fewer than ten genes. Such small gene sets may limit statistical power and affect the reliability of enrichment results. Users should therefore interpret enrichment findings for smaller families with caution and consider the minimum gene-set size requirements of their chosen analysis method
+
+---
 ## Repository structure
 
 ```text
